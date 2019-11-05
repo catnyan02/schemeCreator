@@ -1,0 +1,51 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(271, 191)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(60, 20, 161, 20))
+        font = QtGui.QFont()
+        font.setFamily("Verdana")
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(60, 140, 161, 28))
+        self.pushButton.setObjectName("pushButton")
+        self.widget = QtWidgets.QWidget(Form)
+        self.widget.setGeometry(QtCore.QRect(63, 50, 151, 81))
+        self.widget.setObjectName("widget")
+        self.gridLayout = QtWidgets.QGridLayout(self.widget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1)
+        self.spinBox = QtWidgets.QSpinBox(self.widget)
+        self.spinBox.setMinimum(1)
+        self.spinBox.setMaximum(1000)
+        self.spinBox.setObjectName("spinBox")
+        self.gridLayout.addWidget(self.spinBox, 0, 1, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.widget)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1)
+        self.spinBox_2 = QtWidgets.QSpinBox(self.widget)
+        self.spinBox_2.setMinimum(1)
+        self.spinBox_2.setMaximum(1000)
+        self.spinBox_2.setObjectName("spinBox_2")
+        self.gridLayout.addWidget(self.spinBox_2, 1, 1, 1, 1)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Инициализация"))
+        self.label.setText(_translate("Form", "Размер новой схемы"))
+        self.pushButton.setText(_translate("Form", "Начать"))
+        self.label_2.setText(_translate("Form", "Высота"))
+        self.label_3.setText(_translate("Form", "Ширина"))
